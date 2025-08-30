@@ -10,9 +10,10 @@ class fc
         int win;
     public:
         fc(string a, string b, int c, int d);   
-        
+
         friend class details;
         friend void function(fc & fc1); 
+        ~fc();
 };
 
 fc::fc(string a, string b, int c, int d)
@@ -22,6 +23,12 @@ fc::fc(string a, string b, int c, int d)
     loss = c;
     win = d;
 }
+
+fc::~fc()
+{
+    cout << "Destructor called for " << name << endl;
+}
+
 void function(fc &fc1)
 {
     cout << "Name of club : " << fc1.name << " Position of club : " << fc1.position << " Number of losses : " << fc1.loss << " Number of wins : " << fc1.win << endl ;
