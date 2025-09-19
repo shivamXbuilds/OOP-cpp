@@ -1,3 +1,5 @@
+copy constructor is a constructor defined to make a copy of already existing object
+
 #include<iostream>
 #include <string.h>
 using namespace std;
